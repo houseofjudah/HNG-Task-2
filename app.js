@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const authRoute = require('./routes/auth.route');
 const organisationRoute = require('./routes/org.route');
-const sequelize = require('./models').sequelize;
+const {sequelize, models} = require('./database').sequelize;
 
 app.use(express.json());
 
@@ -13,3 +13,5 @@ const port = process.env.PORT
 app.listen(port, () => {
   console.log('Server listening on port' + port);
 });
+
+

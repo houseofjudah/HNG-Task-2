@@ -1,5 +1,5 @@
 const { Organisation } = require('../models/org.model');
-
+const { User } = require('../models/user.model')
 const getOrganisations = async (req, res) => {
   try {
     const organisations = await Organisation.findAll({
