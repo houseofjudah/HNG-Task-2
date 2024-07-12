@@ -7,7 +7,7 @@ const sequelize = new Sequelize(process.env.Database, process.env.Usernane, proc
 });
 
 const Organisation = require('./models/org.model')(sequelize, Sequelize.DataTypes);
-const User = require('./models/user.model')(sequelize,Sequelize.DataTypes);
+const User = require('./models/user.model')(sequelize, Sequelize.DataTypes);
 sequelize
   .authenticate()
   .then(() => {

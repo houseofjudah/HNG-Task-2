@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { User } = require('../models/user.model');
 const {Organisation} = require('../models/org.model')
@@ -28,7 +28,7 @@ const register = async (req, res) => {
     });
 
     res.status(201).json({
-      status: 'uccess',
+      status: 'success',
       message: 'Registration successful',
       data: {
         accessToken,
@@ -88,7 +88,7 @@ const login = async (req, res) => {
     });
 
     res.status(200).json({
-      status: 'uccess',
+      status: 'Success',
       message: 'Login successful',
       data: {
         accessToken,

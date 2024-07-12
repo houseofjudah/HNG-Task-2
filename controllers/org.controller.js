@@ -9,7 +9,7 @@ const getOrganisations = async (req, res) => {
     });
 
     res.status(200).json({
-      status: 'uccess',
+      status: 'success',
       message: 'Organisations retrieved successfully',
       data: {
         organisations: organisations.map((organisation) => ({
@@ -22,7 +22,7 @@ const getOrganisations = async (req, res) => {
   } catch (error) {
     res.status(400).json({
       status: 'Bad request',
-message: 'Failed to retrieve organisations'
+      message: 'Failed to retrieve organisations'
     });
   }
 };
@@ -44,7 +44,7 @@ const getOrganisation = async (req, res) => {
     }
 
     res.status(200).json({
-      status: 'uccess',
+      status: 'success',
       message: 'Organisation retrieved successfully',
       data: {
         orgId: organisation.orgId,
@@ -72,7 +72,7 @@ const createOrganisation = async (req, res) => {
     req.user.addOrganisation(organisation);
 
     res.status(201).json({
-      status: 'uccess',
+      status: 'success',
       message: 'Organisation created successfully',
       data: {
         orgId: organisation.orgId,
@@ -120,7 +120,7 @@ const addUsersToOrganisation = async (req, res) => {
     organisation.addUser(user);
 
     res.status(200).json({
-      status: 'uccess',
+      status: 'success',
       message: 'User added to organisation successfully'
     });
   } catch (error) {
